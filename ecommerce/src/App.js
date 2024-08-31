@@ -1,7 +1,19 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
 
 export default function App() {
   return (
-    <h1>This is my Django Rest Framework Project</h1>
+    <>
+    <div>
+    <Navbar />
+      <Container>
+        <h1>Django Rest and React-Redux Project</h1>
+      </Container>
+    <Footer />
+    </div>
+    </>
   )
 }
