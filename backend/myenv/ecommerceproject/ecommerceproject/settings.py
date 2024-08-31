@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-j$@akwsa!(_yq7x4u^j5h!spo!*2h7r!!f^or)x#*8^v%^ma$n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-fgit24-djangorestframew-jey1vl9v56w.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ecomapp',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
