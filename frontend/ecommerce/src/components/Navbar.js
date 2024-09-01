@@ -18,22 +18,15 @@ export default function navbar() {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Features</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Pricing</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">About</a>
+          <a className="nav-link" href="#">Cart</a>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">New User?</a>
           <div className="dropdown-menu">
-            <a className="dropdown-item" href="#">Action</a>
-            <a className="dropdown-item" href="#">Another action</a>
-            <a className="dropdown-item" href="#">Something else here</a>
+            <a className="dropdown-item" href="#">Login</a>
+            <a className="dropdown-item" href="#">Signup</a>
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="#">Separated link</a>
+            <a className="dropdown-item" href="#">Logout</a>
           </div>
         </li>
       </ul>
