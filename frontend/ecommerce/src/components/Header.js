@@ -28,7 +28,6 @@ function Header() {
                 <LinkContainer to="/">
                   <Nav.Link className="navbar-link active">Home</Nav.Link>
                 </LinkContainer>
-                Home
               </li>
               <li className="nav-item">
                 <LinkContainer to="/cart">
