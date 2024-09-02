@@ -54,6 +54,10 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-fgit24-djangorestframew-jey1vl9v56w.ws.codeinstitute-ide.net',
+]
+
 ROOT_URLCONF = 'ecommerceproject.urls'
 
 TEMPLATES = [
@@ -122,7 +126,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/images/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+MEDIA_ROOT='static/images'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGIN = True
