@@ -8,7 +8,8 @@ function Homescreen() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const { data } = await axios.get('/api/products/');
+        const { data } = await axios.get('api/products/');
+        console.log(data);
         setProducts(data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -25,9 +26,15 @@ function Homescreen() {
         {products.map((product) => (
           <Col key={product._id} xs={12} md={6} lg={4} xl={3}>
             <h3>{product.productname}</h3>
+            <h6>{product.category}</h6>
+            <p>{product.price}</p>
           </Col>
         ))}
       </Row>
+
+
+
+
     </Container>
   );
 }
