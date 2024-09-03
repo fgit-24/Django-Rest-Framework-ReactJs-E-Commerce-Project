@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .products import products
+from .products import product
+from .serializer import ProductSerializer
 
 # Create your views here.
 @api_view(['GET'])
