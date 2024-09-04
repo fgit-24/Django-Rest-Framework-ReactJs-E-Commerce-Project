@@ -7,7 +7,7 @@ import HomeScreen from './components/screens/HomeScreen';
 import SignupScreen from './components/screens/SignupScreen';
 import LoginScreen from './components/screens/LoginScreen';
 import CartScreen from './components/screens/CartScreen';
-import Product from './components/Product';
+import ProductScreen from './components/screens/ProductScreen';
 
 
 
@@ -21,7 +21,7 @@ export default function App() {
           <Route exact path="/" element={<HomeScreen/>}></Route>
         </Routes>
         <Routes>
-          <Route exact path="/product/:id" element={<Product/>}></Route>
+          <Route exact path="/product/:id" element={<ProductScreen/>}></Route>
         </Routes>
         <Routes>
           <Route exact path="/login" element={<LoginScreen/>}></Route>
