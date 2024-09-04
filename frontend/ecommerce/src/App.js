@@ -7,6 +7,8 @@ import HomeScreen from './components/screens/HomeScreen';
 import SignupScreen from './components/screens/SignupScreen';
 import LoginScreen from './components/screens/LoginScreen';
 import CartScreen from './components/screens/CartScreen';
+import Product from './components/Product';
+
 
 
 
@@ -17,6 +19,9 @@ export default function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<HomeScreen/>}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path="/product/:id" element={<Product/>}></Route>
         </Routes>
         <Routes>
           <Route exact path="/login" element={<LoginScreen/>}></Route>
