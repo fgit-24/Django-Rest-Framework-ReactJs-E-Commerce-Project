@@ -139,4 +139,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGIN = True
+CORS_ALLOW_ALL_ORIGINS = True
