@@ -62,3 +62,5 @@ function Rating({ value, text, color }) {
         </div>
     )
 }
+
+export default Rating;

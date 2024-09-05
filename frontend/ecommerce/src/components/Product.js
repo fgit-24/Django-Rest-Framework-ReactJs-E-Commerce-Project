@@ -11,15 +11,15 @@ function Product({product}) {
         <Card.Img src={product.image} />
       </Link>
       <Card.Body>
-      <Link to={`/product/${product._id}`}>
-        <Card.Title as="div">
-          <strong>{product.productname}</strong>
+      <Link to={`/product/${product._id}`} className='text=dark'>
+        <Card.Title as="h3">
+          {product.productname}
         </Card.Title>
       </Link>
 
       <Card.Text as="div">
       <div className='my-3'>
-        {product.rating} reviews
+        {product.rating} from ${product.numReviews} reviews
       </div>
       </Card.Text>
       
