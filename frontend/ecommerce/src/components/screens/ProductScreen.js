@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import {Link,useParams} from 'react-router-dom'
 import {Row, Col, Image,ListGroup,Button,Card,Container} from 'react-bootstrap'
 import Rating from '../Rating'
-import { listProductDetails } from "../../actions/productsActions";
-import {useDispatch,useSelector} from 'react-redux'
-import Loader from "../Loader";
-import Message from "../Message";
+// import { listProductDetails } from "../../actions/productsActions";
+// import {useDispatch,useSelector} from 'react-redux'
+// import Loader from "../Loader";
+// import Message from "../Message";
 
 function ProductScreen({params}) {
     const {id}= useParams()
@@ -63,7 +63,7 @@ dispatch(listProductDetails(id))
                 <Row>
                   <Col>Price:</Col>
                   <Col>
-                    <strong>{product.price} Rs</strong>
+                    <strong>{product.price} Euro</strong>
                   </Col>
                 </Row>
               </ListGroup.Item>
