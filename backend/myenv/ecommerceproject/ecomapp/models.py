@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-class Product(models.Model):
+class Products(models.Model):
     user=models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
     productname=models.CharField(max_length=150)
     image=models.ImageField(null=True,blank=True)

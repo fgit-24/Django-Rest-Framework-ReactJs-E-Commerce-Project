@@ -26,6 +26,12 @@ function Product({product}) {
       <Card.Text as="h6">
         ${product.price} Euro
       </Card.Text>
+      
+      <Rating
+          value={product.rating}
+          text={`${product.numReviews} reviews`}
+          color={"#f8e825"}
+      />
       </Card.Body>
     </Card>
   )
