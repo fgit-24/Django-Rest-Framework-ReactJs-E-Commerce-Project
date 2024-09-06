@@ -3,21 +3,19 @@ import { Container } from "react-bootstrap";
 import axios from "axios";
 import { Row, Col } from "react-bootstrap";
 import Product from "../Product";
+import { listProducts } from '../../actions/productsActions'
+import {useDispatch, useSelector} from 'react-redux'
+
+
 
 function HomeScreen() {
-  const [products, setProducts] = useState([]);
+  const dispatch=useDispatch()
+  const productsList = useSelector((state) => state.productsList);
+  const {error, loading, products}=productsList
 
   useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const { data } = await axios.get("api/products/");
-        setProducts(data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    }
-    fetchProducts();
-  }, []);
+    dispatch(listProducts())
+  }, [dispatch]);
 
   return (
     <Container>
