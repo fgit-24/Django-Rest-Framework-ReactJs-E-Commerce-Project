@@ -20,15 +20,30 @@ function HomeScreen() {
   return (
     <Container>
       <br />
-      <h1>Products</h1>
+      <h1>Products </h1>
 
+
+      {
+        loading?(
+          <Loader/>
+        ):error ? (
+     <Message variant='danger'>{error}</Message>
+        ):(
+          
       <Row>
         {products.map((product) => (
-          <Col key={product.id} xs={12} md={6} lg={4} xl={3}>
+          <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+
             <Product product={product} />
+            
+
           </Col>
         ))}
       </Row>
+        )
+      }
+
+
     </Container>
   );
 }
