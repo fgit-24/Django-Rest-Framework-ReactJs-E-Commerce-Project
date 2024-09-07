@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import {Link,useParams} from 'react-router-dom'
 import {Row, Col, Image,ListGroup,Button,Card,Container} from 'react-bootstrap'
 import Rating from '../Rating'
-// import { listProductDetails } from "../../actions/productsActions";
-// import {useDispatch,useSelector} from 'react-redux'
+import { listProductDetails } from "../../actions/productsActions";
+import {useDispatch,useSelector} from 'react-redux'
 // import Loader from "../Loader";
 // import Message from "../Message";
 
