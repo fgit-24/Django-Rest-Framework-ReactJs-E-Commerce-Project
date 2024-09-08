@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ecomapp',
     'rest_framework',
     "corsheaders",
+    "rest_framework_simplejwt",
 ]
 
 MIDDLEWARE = [
