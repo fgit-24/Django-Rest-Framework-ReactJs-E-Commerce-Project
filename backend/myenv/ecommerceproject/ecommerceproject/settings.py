@@ -54,6 +54,13 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-fgit24-djangorestframew-jey1vl9v56w.ws.codeinstitute-ide.net',
 ]
