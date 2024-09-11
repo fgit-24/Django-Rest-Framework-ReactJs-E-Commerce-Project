@@ -33,10 +33,30 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token = super().get_token(user)
 
         # Add custom claims
-        token['name'] = user.name
+        token['username'] = user.username
+        token['email'] = user.email
         # ...
 
         return token
+
+
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+     def validate(self, attrs):
+
+        data = super().validate(attrs)
+        serializer=UserSerializerWithToken(self.user).data
+        for k, v in serializer.items():
+            data[k] = v
+
+        return data
+
+
+    
+
+    serializer_class=MyTokenObtainPairSerializer
+
+
+
 
 @api_view(['GET'])
 def getUserProfile(request):
