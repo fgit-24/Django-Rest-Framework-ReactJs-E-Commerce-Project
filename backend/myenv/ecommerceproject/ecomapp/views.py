@@ -52,8 +52,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 
     
-
-    serializer_class=MyTokenObtainPairSerializer
+serializer_class=MyTokenObtainPairSerializer
 
 
 
