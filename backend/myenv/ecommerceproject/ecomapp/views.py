@@ -77,7 +77,7 @@ def getUsers(request):
 def registerUser(request):
     data=request.data
     try:
-        user=User.objects.create(first_name=data['fname'], lastname=data['lname'], username=data['email'], email=data['email'], password=make_password(data['password']))
+        user=User.objects.create(first_name=data['fname'], lastname=data['lname'], username=data['email'], email=data['email'], password=make_password(data['password']), is_active=False)
         serialize=UserSerializerWithToken(user, many=False)
         return Response(serialize.data)
     except:
