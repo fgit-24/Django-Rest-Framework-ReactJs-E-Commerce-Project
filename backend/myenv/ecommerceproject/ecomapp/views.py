@@ -3,11 +3,13 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 # from .products import products
 from .models import Products
-from .serializer import ProductsSerializer, UserSerializer
+from .serializer import ProductsSerializer, UserSerializer, UserSerializerWithToken
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
-
+from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
+from rest_framework import status
 
 # Create your views here.
 @api_view(['GET'])
@@ -69,3 +71,15 @@ def getUsers(request):
     user = User.object.all()
     serializer=UserSerializer(user, many='True')
     return Response(serializer.data)
+
+
+@api_view(["POST"])
+def registerUser(request):
+    data=request.data
+    try:
+        user=User.objects.create(first_name=data['fname'], lastname=data['lname'], username=data['email'], email=data['email'], password=make_password(data['password']))
+        serialize=UserSerializerWithToken(user, many=False)
+        return Response(serialize.data)
+    except:
+        message={'details': "User Already Exists."}
+        return Response(message, status=status.HTTP_400_BAD_REQUEST)
