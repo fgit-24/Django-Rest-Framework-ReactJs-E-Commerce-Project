@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 # from .products import products
 from .models import Products
 from .serializer import ProductSerializer, UserSerializer
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+
 
 # Create your views here.
 @api_view(['GET'])
@@ -49,16 +51,21 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
             data[k] = v
 
         return data
-
-
     
 serializer_class=MyTokenObtainPairSerializer
 
 
-
-
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def getUserProfile(request):
     user = request.user
     serializer=UserSerializer(user, many='False')
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+@permission_classes([IsAdminUser])
+def getUsers(request):
+    user = User.object.all()
+    serializer=UserSerializer(user, many='True')
     return Response(serializer.data)
