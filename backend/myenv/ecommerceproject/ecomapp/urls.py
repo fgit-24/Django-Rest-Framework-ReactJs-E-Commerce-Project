@@ -9,6 +9,7 @@ urlpatterns = [
     path('products/', views.getProducts, name="getProducts"),
     path('product/<str:pk>', views.getProduct, name="getProduct"),
     path('users/login/', views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('users/profile', views.getUserProfiles, name="getUserProfiles"),
-    path('users/', views.getUsers, name="getUser")
+    path('users/profile', views.getUserProfile, name="getUserProfile"),
+    path('users/', views.getUsers, name="getUsers"),
+    path('users/register/', views.register, name="register")
 ]
