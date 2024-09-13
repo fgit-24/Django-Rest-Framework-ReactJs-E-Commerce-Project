@@ -63,7 +63,7 @@ dispatch(listProductDetails(id))
                 <Row>
                   <Col>Price:</Col>
                   <Col>
-                    <strong>{product.price} Euro</strong>
+                    <strong>{product.price} Rs</strong>
                   </Col>
                 </Row>
               </ListGroup.Item>

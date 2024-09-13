@@ -9,7 +9,7 @@ function Header() {
       <Navbar className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div className="container-fluid">
           <LinkContainer to="/">
-            <Nav.Link className="navbar-brand">E-Commerce Cart</Nav.Link>
+            <Nav.Link className="navbar-brand">Ecommerce Cart </Nav.Link>
           </LinkContainer>
           <button
             className="navbar-toggler"
@@ -26,21 +26,23 @@ function Header() {
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <LinkContainer to="/">
-                  <Nav.Link className="navbar-link active">Home<i class="fa-solid fa-house"></i></Nav.Link>
+                  <Nav.Link className="navbar-link active">Home <i className="fa-solid fa-house"></i></Nav.Link>
                 </LinkContainer>
+               
               </li>
               <li className="nav-item">
                 <LinkContainer to="/cart">
-                  <Nav.Link className="nav-link">
-                    Cart
-                  </Nav.Link>
+                <Nav.Link className="nav-link">
+                  Cart
+                </Nav.Link>
                 </LinkContainer>
               </li>
+
               <li className="nav-item dropdown">
               <LinkContainer to="/signup">
-                <Nav.Link className="nav-link dropdown-toggle"
+                <Nav.Link  className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
-
+              
                   role="button"
                   aria-haspopup="true"
                   aria-expanded="false"
@@ -50,15 +52,16 @@ function Header() {
                 </LinkContainer>
                 <div className="dropdown-menu">
                 <LinkContainer to="/login">
-                  <Nav.Link className="dropdown-item" href="#">
+                  <Nav.Link  className="dropdown-item" href="#">
                     Login
                   </Nav.Link>
-                </LinkContainer>
-                  <LinkContainer to="/signup">
-                    <Nav.Link className="dropdown-item" href="#">
-                      Signup
-                    </Nav.Link>
                   </LinkContainer>
+                  <LinkContainer to="/signup">
+                  <Nav.Link  className="dropdown-item" href="#">
+                    Signup
+                  </Nav.Link>
+                  </LinkContainer>
+
                   <div className="dropdown-divider"></div>
                   <a className="dropdown-item" href="#">
                     Logout
@@ -82,6 +85,5 @@ function Header() {
     </>
   );
 }
-
 
 export default Header;

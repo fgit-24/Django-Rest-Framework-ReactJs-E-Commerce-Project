@@ -2,14 +2,14 @@ import React from 'react'
 
 function Rating({ value, text, color }) {
     return (
-        <div className='rating'>
+        <div className="rating">
             <span>
                 <i style={{ color }} className={
                     value >= 1
                         ? 'fas fa-star' //solid star
-                        : value >= 0.5
+                        : value >= 0.5 
                             ? 'fas fa-star-half-alt'
-                            : 'far fa-star' //if both cases fail, it's an empty star
+                            : 'far fa-star' //if both cases fail its empty star
                 }>
 
                 </i>
@@ -23,6 +23,7 @@ function Rating({ value, text, color }) {
                             ? 'fas fa-star-half-alt'
                             : 'far fa-star'
                 }>
+
                 </i>
             </span>
 
@@ -34,6 +35,7 @@ function Rating({ value, text, color }) {
                             ? 'fas fa-star-half-alt'
                             : 'far fa-star'
                 }>
+
                 </i>
             </span>
 
@@ -45,6 +47,7 @@ function Rating({ value, text, color }) {
                             ? 'fas fa-star-half-alt'
                             : 'far fa-star'
                 }>
+
                 </i>
             </span>
 
@@ -56,11 +59,13 @@ function Rating({ value, text, color }) {
                             ? 'fas fa-star-half-alt'
                             : 'far fa-star'
                 }>
+
                 </i>
             </span>
 
+            <span>{text && text}</span>
         </div>
     )
 }
 
-export default Rating;
+export default Rating
